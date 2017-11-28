@@ -1,0 +1,4 @@
+!bin
+vim/bundle/
+.zcompdump
+local/
