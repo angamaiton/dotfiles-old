@@ -180,9 +180,9 @@ install_asdf_plugin() {
 # shellcheck disable=SC1090
 source "$HOME/.asdf/asdf.sh"
 install_asdf_plugin "ruby"
+install_asdf_plugin "python"
 install_asdf_plugin "elixir"
 install_asdf_plugin "nodejs"
-
 
 install_asdf_language() {
   local language="$1"
@@ -203,6 +203,15 @@ gem_install_or_update "bundler"
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
+bash "$HOME/dotfiles/ruby/install-gems"
+
+# ASDF: Python
+## NOTE: Install manually; grepping doesn't work.
+fancy_echo "Installing latest Python (py3)..."
+asdf install python 3.6.3
+asdf global python 3.6.3
+bash "$HOME/dotfiles/python/install-packages"
+
 # ASDF: Elixir
 fancy_echo "Installing latest Elixir..."
 install_asdf_language "elixir"
@@ -218,12 +227,7 @@ fancy_echo "Checking NPM environment using yo doctor..."
 yo doctor || exit 1
 
 fancy_echo "Installing global NPM packages..."
-while read -r package; do
-  if [ "$package" != "yo" ] \
-    && [ "$package" != "eslint" ]; then
-    npm install -g --production "$package"
-  fi
-done < "$HOME/dotfiles/default-node"
+bash "$HOME/dotfiles/node/install-packages"
 
 if [ -f "$HOME/.local/laptop" ]; then
   fancy_echo "Running your customizations from ~/.local/laptop..."

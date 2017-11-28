@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+__install() {
+  while read -r gemname; do
+    gem install "$gemname"
+  done < "$HOME/dotfiles/ruby/default-gems"
+
+  echo "Done!"
+}
+
+__install

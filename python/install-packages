@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+__install() {
+  while read -r pipsqueak; do
+    pip install --upgrade "$pipsqueak"
+  done < "$HOME/dotfiles/python/default-pip"
+
+  echo "Done!"
+}
+
+__install

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+__install() {
+  while read -r package; do
+    npm install -g "$package"
+  done < "$HOME/dotfiles/node/default-packages"
+  
+  echo "Done!"
+}
+
+__install
