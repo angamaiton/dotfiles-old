@@ -1,0 +1,170 @@
+" ============================================================================
+" Settings
+" ============================================================================
+if &compatible
+  set nocompatible
+end
+
+let g:has_async = v:version >= 800 || has('nvim')
+
+" ============================================================================
+" Bundles
+" ============================================================================
+
+call plug#begin('~/.vim/bundle')
+
+" Seamless navigation between tmux panes and vim splits
+Plug 'christoomey/vim-tmux-navigator'
+
+" Fuzzy file, buffer, mru, tag, etc finder
+" Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'mattn/emmet-vim'
+
+" Trims trailing whitespace on buffer write (...?)
+Plug 'derekprior/vim-trimmer'
+
+" Command-line fuzzy finder and corresponding vim plugin
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc --64' }
+Plug 'junegunn/fzf.vim'
+
+" Git commit browser
+Plug 'junegunn/gv.vim'
+
+" Configurable statusline for Vim
+Plug 'itchyny/lightline.vim'
+
+" Handle line and column numbers in file names
+Plug 'kopischke/vim-fetch'
+
+" Automatically create any non-existent directories before writing the buffer
+Plug 'pbrisbin/vim-mkdir'
+
+" Automatically clears search highlight
+Plug 'pgdouyon/vim-evanesco'
+
+" Wisely add "end" in ruby, endfunction/endif/more in vim script, etc.
+Plug 'tpope/vim-endwise'
+
+" Git wrapper for vim/Neovim
+Plug 'tpope/vim-fugitive'
+
+" Provides granular project configuration using "projections"
+Plug 'tpope/vim-projectionist'
+
+" Enable repeating supported plugin maps with "."
+Plug 'tpope/vim-repeat'
+
+" GitHub extension for fugitive.vim
+Plug 'tpope/vim-rhubarb'
+
+" Quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+
+" Pairs of handy bracket mappings
+Plug 'tpope/vim-unimpaired'
+
+" Combine with netrw to create a delicious salad dressing
+Plug 'tpope/vim-vinegar'
+
+" An extensible & universal comment plugin that also handles embedded filetypes
+Plug 'vim-scripts/tComment'
+
+" A colorizer I've been using for vim-snazzy
+Plug 'chrisbra/Colorizer'
+
+" ============================================================================
+" Languages
+" ============================================================================
+
+" =======================================
+" Elixir
+" =======================================
+
+Plug 'elixir-lang/vim-elixir'
+
+" =======================================
+" Elm
+" =======================================
+Plug 'ElmCast/elm-vim'
+
+" =======================================
+" Go/golang
+" =======================================
+
+Plug 'fatih/vim-go'
+
+" =======================================
+" JavaScript/JSX et al.
+" =======================================
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'maxmellon/vim-jsx-pretty'
+Plug 'chemzqm/vim-jsx-improve'
+
+Plug 'jparise/vim-graphql'
+
+Plug 'styled-components/vim-styled-components'
+
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+
+" =======================================
+" Ruby
+" =======================================
+
+Plug 'vim-ruby/vim-ruby'
+
+" allows rapid toggling between the two different styles of ruby blocks, namely
+" do/end and brackets {}
+Plug 'jgdavey/vim-blockle', { 'for' : 'ruby' }
+
+" lightweight RSpec runner for Vim
+Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby'}
+
+" =======================================
+" Rust
+" =======================================
+
+Plug 'rust-lang/rust.vim'
+
+" ============================================================================
+" Linting
+" ============================================================================
+
+if g:has_async
+  Plug 'w0rp/ale'
+endif
+
+" ============================================================================
+" Snippets
+" ============================================================================
+
+Plug 'SirVer/ultisnips'
+
+Plug 'honza/vim-snippets'
+
+" ============================================================================
+" Testing
+" ============================================================================
+
+" Test runner (apparently very fast)
+Plug 'janko-m/vim-test'
+
+" ============================================================================
+" Themes
+" ============================================================================
+
+Plug 'dracula/vim'
+" Plug 'angamaiton/vim-snazzy'
+
+" ============================================================================
+" System: TO SORT
+" ============================================================================
+
+Plug 'jiangmiao/auto-pairs'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Valloric/MatchTagAlways'
+
+call plug#end()
