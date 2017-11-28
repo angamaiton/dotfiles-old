@@ -10,6 +10,9 @@ Make sure you have zsh set as your login shell:
 
 `chsh -s $(which zsh)`
 
+Make sure you either run `./laptop` or already have all of the packages listed
+on your machine.
+
 ## Installation
 
 Clone onto your laptop:
