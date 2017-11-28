@@ -1,0 +1,116 @@
+# Unix
+alias ls="exa"
+alias ll="ls -al"
+alias la="ls -a"
+alias ln="ln -v"
+alias l="la"
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+alias clear="clear; tmux clear-history"
+
+# Rails
+alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias s="rspec"
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# dotfiles
+alias dotf="cd ~/dotfiles"
+alias dotl="cd ~/dotfiles/local"
+
+alias edot="$EDITOR ~/dotfiles"
+alias ebun="$EDITOR ~/dotfiles/vimrc.bundles"
+alias evrc="$EDITOR ~/dotfiles/vimrc"
+alias realias="source ~/.aliases"
+
+alias o="$EDITOR ."
+
+# ----------------------------------------------------------------------------
+# Binaries
+# ----------------------------------------------------------------------------
+
+alias t="tree -a --noreport --dirsfirst -I '.git|node_modules|bower_components|.DS_Store'"
+
+# ----------------------------------------------------------------------------
+# safeguarding
+# @see {@link
+# https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm}
+#  ----------------------------------------------------------------------------
+
+alias rm='rm -i'
+
+# ----------------------------------------------------------------------------
+# paths
+# ----------------------------------------------------------------------------
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias tree="tree -CF"
+
+# ----------------------------------------------------------------------------
+# git
+# ----------------------------------------------------------------------------
+
+if command -v hub >/dev/null; then alias g='hub'; else alias g='git'; fi
+alias g-="g checkout -"
+
+alias gaa="g add -A"
+alias gb="g branch --verbose"
+alias gcms="g commit -m"
+alias gcam="g commit -am"
+alias gcm='g commit -v'
+alias gd="g diff"
+alias ginit="g init"
+alias gl="g log"
+alias gm="g checkout master"
+alias gp="g push"
+alias gpu="g pull"
+alias gs="g status"
+alias gsh="command g sh"
+
+# ----------------------------------------------------------------------------
+# npm
+# ----------------------------------------------------------------------------
+
+alias n="npm"
+alias ni="npm install"
+alias ninit="npm init -y"
+alias no="npm outdated --long"
+alias nomod='rm -rf ./node_modules'
+alias nr="npm run"
+alias ns="npm start"
+alias nd="npm run develop"
+alias nt="npm test"
+alias nu="npm update"
+
+alias y="yarn"
+alias yi="yarn install"
+alias yr="yarn run"
+alias yt="yarn test"
+
+# ----------------------------------------------------------------------------
+# python
+# ----------------------------------------------------------------------------
+
+alias py3="python3"
+alias py="python"
+
+alias getsubs="subliminal download -p opensubtitles -p shooter -p subscenter -p thesubdb -p tvsubtitles --language en "
+
+# ----------------------------------------------------------------------------
+# ruby
+# ----------------------------------------------------------------------------
+
+alias bun="bundle"
+alias be="bun exec"
+
+# ----------------------------------------------------------------------------
+# sudo ops
+# ----------------------------------------------------------------------------
+alias mine='sudo chown -R "$USER"'
+alias root='sudo -s'
+alias se='sudo -e'

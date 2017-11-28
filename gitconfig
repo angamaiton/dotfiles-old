@@ -29,3 +29,5 @@
   autosquash = true
 [include]
   path = ~/.local/gitconfig
+
+# vim:ft=gitconfig

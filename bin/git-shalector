@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+target_commit=$(
+  commits=$(git log --color=always --pretty=oneline --abbrev-commit --reverse) &&
+  commit=$(echo "$commits" | fzf --tac +s +m -e --ansi --reverse) &&
+  echo -n $(echo "$commit" | sed "s/ .*//")
+)
+
+printf "%s" "$target_commit" | pbcopy
+
+echo "Commit hash copied ($target_commit)"
