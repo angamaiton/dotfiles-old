@@ -42,6 +42,16 @@ setopt NO_BEEP
 setopt VI
 
 # ============================================================================
+# History
+# ============================================================================
+
+HISTFILE=~/.zhistory
+HISTSIZE=4096
+SAVEHIST=4096
+
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# ============================================================================
 # Keybindings
 # ============================================================================
 
@@ -62,3 +72,26 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey "^Q" push-line-or-edit
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
+
+# ============================================================================
+# Prompt
+# ============================================================================
+
+# makes color constants available
+autoload -U colors
+colors
+
+# enable colored output from ls, etc. on FreeBSD-based systems
+export CLICOLOR=1
+
+# NOTE: Syntax highlighting should have already been installed in pre/zplug.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# ============================================================================
+# Command line
+# ============================================================================
+
+# C-x C-e to edit command-line in EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
