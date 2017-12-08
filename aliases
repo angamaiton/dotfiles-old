@@ -21,12 +21,25 @@ alias path='echo $PATH | tr -s ":" "\n"'
 alias dotf="cd ~/dotfiles"
 alias dotl="cd ~/dotfiles/local"
 
-alias edot="$EDITOR ~/dotfiles"
-alias ebun="$EDITOR ~/dotfiles/vimrc.bundles"
-alias evrc="$EDITOR ~/dotfiles/vimrc"
+alias edot="cd ~/dotfiles && $EDITOR ."
+alias ebun="cd ~/dotfiles && $EDITOR ./vimrc.bundles"
+alias evrc="cd ~/dotfiles && $EDITOR ./vimrc"
 alias realias="source ~/.aliases"
 
 alias o="$EDITOR ."
+
+# ----------------------------------------------------------------------------
+# Homebrew
+# ----------------------------------------------------------------------------
+
+alias b="brew"
+alias bi="b install"
+alias bci="b cask install"
+alias bs="b search"
+alias bcs="b cask search"
+alias bu="b uninstall"
+alias bcu="b cask uninstall"
+alias bud="b update && b upgrade"
 
 # ----------------------------------------------------------------------------
 # Binaries
@@ -63,6 +76,8 @@ alias gb="g branch --verbose"
 alias gcms="g commit -m"
 alias gcam="g commit -am"
 alias gcm='g commit -v'
+alias gco="g checkout"
+alias gcob="g checkout -b"
 alias gd="g diff"
 alias ginit="g init"
 alias gl="g log"
@@ -90,6 +105,7 @@ alias nu="npm update"
 alias y="yarn"
 alias yi="yarn install"
 alias yr="yarn run"
+alias ys="yarn start"
 alias yt="yarn test"
 
 # ----------------------------------------------------------------------------
@@ -111,6 +127,7 @@ alias be="bun exec"
 # ----------------------------------------------------------------------------
 # sudo ops
 # ----------------------------------------------------------------------------
+
 alias mine='sudo chown -R "$USER"'
 alias root='sudo -s'
 alias se='sudo -e'

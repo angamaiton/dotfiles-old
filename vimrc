@@ -302,6 +302,9 @@ set re=1
 filetype plugin indent on
 set pastetoggle=<F2>
 
+" HACKY: try to find a better way to do this
+au FileType * set fo-=c fo-=r fo-=o
+
 " ============================================================================
 " Bundles
 " ============================================================================
@@ -360,6 +363,13 @@ set secure
 colorscheme dracula
 " colorscheme snazzy
 set background=dark
+
+" ----------------------------------------------------------------------------
+" Experiments
+" ----------------------------------------------------------------------------
+
+" I hate having to manually empty directories!
+let g:netrw_localrmdir='rm -r'
 
 highlight Pmenu ctermbg=75 guibg=#2c323c
 highlight PmenuSel ctermbg=17 guibg=#3c4452

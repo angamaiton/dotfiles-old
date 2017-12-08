@@ -95,3 +95,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
+
+# ============================================================================
+# Source
+# ============================================================================
+
+# source "$HOME/.asdf/installs/nodejs/9.2.0/.npm/lib/node_modules"
