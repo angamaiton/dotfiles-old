@@ -8,7 +8,10 @@ alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
 
+alias o="$EDITOR ."
+
 alias clear="clear; tmux clear-history"
+alias tks="tmux kill-server"
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
@@ -26,7 +29,6 @@ alias ebun="cd ~/dotfiles && $EDITOR ./vimrc.bundles"
 alias evrc="cd ~/dotfiles && $EDITOR ./vimrc"
 alias realias="source ~/.aliases"
 
-alias o="$EDITOR ."
 
 # ----------------------------------------------------------------------------
 # Homebrew

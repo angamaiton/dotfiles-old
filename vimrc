@@ -360,7 +360,8 @@ set secure
 " Theme
 " ============================================================================
 
-colorscheme dracula
+colorscheme onedark
+" colorscheme dracula
 " colorscheme snazzy
 set background=dark
 
@@ -370,6 +371,10 @@ set background=dark
 
 " I hate having to manually empty directories!
 let g:netrw_localrmdir='rm -r'
+let g:prettier#config#bracket_spacing='true'
+let g:vue_disable_pre_processors=1
+
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 highlight Pmenu ctermbg=75 guibg=#2c323c
 highlight PmenuSel ctermbg=17 guibg=#3c4452

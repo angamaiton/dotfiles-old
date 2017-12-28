@@ -73,9 +73,17 @@ Plug 'vim-scripts/tComment'
 " A colorizer I've been using for vim-snazzy
 " Plug 'chrisbra/Colorizer'
 
+" vim-sneak - thneak like a thneaky thnek
+Plug 'justinmk/vim-sneak'
+
 " ============================================================================
 " Languages
 " ============================================================================
+
+" =======================================
+" CSS
+" =======================================
+Plug 'hail2u/vim-css3-syntax'
 
 " =======================================
 " Elixir
@@ -105,13 +113,16 @@ Plug 'chemzqm/vim-jsx-improve'
 
 Plug 'jparise/vim-graphql'
 
-Plug 'styled-components/vim-styled-components'
+" Plug 'styled-components/vim-styled-components'
+Plug 'styled-components/vim-styled-components', { 'branch': 'rewrite' }
 
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
 
 Plug 'elzr/vim-json'
+
+" Plug 'posva/vim-vue'
 
 " =======================================
 " Ruby
@@ -132,6 +143,12 @@ Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby'}
 
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
+
+" =======================================
+" SQL
+" =======================================
+
+Plug 'shmup/vim-sql-syntax'
 
 " ============================================================================
 " Linting
@@ -160,6 +177,7 @@ Plug 'janko-m/vim-test'
 " ============================================================================
 
 Plug 'dracula/vim'
+Plug 'joshdick/onedark.vim'
 " Plug 'angamaiton/vim-snazzy'
 
 " ============================================================================

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+# set -e
 shopt -s dotglob
 
 # Add local psqlrc
@@ -15,7 +15,9 @@ else
   curl -fLo "$HOME"/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
-vim -u "$HOME"/.vimrc.bundles +PlugUpdate +PlugClean! +qa
+vim -u "$HOME"/.vimrc.bundles +PlugUpdate +PlugClean! +qa -
+
+reset -Q
 
 # Symlink Vim plugins to Neovim
 for dir in "$HOME"/.vim/*; do
@@ -28,7 +30,6 @@ for dir in "$HOME"/.vim/*; do
   fi
 done
 
-reset -Q
 
 # Ensure fzf is present
 if [ ! -d "$HOME"/.fzf ]; then
