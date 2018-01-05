@@ -71,7 +71,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/tComment'
 
 " A colorizer I've been using for vim-snazzy
-" Plug 'chrisbra/Colorizer'
+Plug 'chrisbra/Colorizer'
 
 " vim-sneak - thneak like a thneaky thnek
 Plug 'justinmk/vim-sneak'
@@ -117,8 +117,8 @@ Plug 'jparise/vim-graphql'
 Plug 'styled-components/vim-styled-components', { 'branch': 'rewrite' }
 
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
 
 Plug 'elzr/vim-json'
 
@@ -178,7 +178,7 @@ Plug 'janko-m/vim-test'
 
 Plug 'dracula/vim'
 Plug 'joshdick/onedark.vim'
-" Plug 'angamaiton/vim-snazzy'
+Plug 'angamaiton/vim-snazzy', { 'branch': 'dev' }
 
 " ============================================================================
 " System: TO SORT

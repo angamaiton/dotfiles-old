@@ -94,7 +94,9 @@ alias gsh="command g sh"
 # ----------------------------------------------------------------------------
 
 alias n="npm"
-alias ni="npm install"
+alias ni="n install"
+alias nig="n install -g"
+alias nid="n install --save-dev"
 alias ninit="npm init -y"
 alias no="npm outdated --long"
 alias nomod='rm -rf ./node_modules'

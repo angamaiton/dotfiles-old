@@ -19,7 +19,6 @@ vnoremap k gk
 " Use Silver Searcher to search globally
 nnoremap \ :Ag<CR>
 
-
 " ----------------------------------------------------------------------------
 " Utility
 " ----------------------------------------------------------------------------
@@ -51,6 +50,7 @@ vnoremap U :echoe "Disabled lowercasing"<CR>
 
 " additional vim-rspec mapping
 nnoremap <Leader>a :TestSuite<CR>
+
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
 noremap <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>

@@ -326,6 +326,12 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+nnoremap <silent> <Leader>t :TestFile<CR>
+nnoremap <silent> <Leader>s :TestNearest<CR>
+nnoremap <silent> <Leader>l :TestLast<CR>
+nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <Leader>gt :TestVisit<CR>
+
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -339,7 +345,7 @@ if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
 
-    " Fuzzy Finder :Files as Ctrl+P
+  " Fuzzy Finder :Files as Ctrl+P
   nnoremap <c-p> :Files<cr>
 
   if !exists(":Ag")
@@ -373,8 +379,6 @@ set background=dark
 let g:netrw_localrmdir='rm -r'
 let g:prettier#config#bracket_spacing='true'
 let g:vue_disable_pre_processors=1
-
-autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 highlight Pmenu ctermbg=75 guibg=#2c323c
 highlight PmenuSel ctermbg=17 guibg=#3c4452

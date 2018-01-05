@@ -30,3 +30,7 @@ GTAGS
 GRTAGS
 GPATH
 tags.log
+
+*.pdf
+*.dmg
+*.exe
