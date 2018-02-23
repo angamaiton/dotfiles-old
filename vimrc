@@ -380,5 +380,9 @@ let g:netrw_localrmdir='rm -r'
 let g:prettier#config#bracket_spacing='true'
 let g:vue_disable_pre_processors=1
 
+augroup filetypedetect
+  autocmd! BufNewFile,BufRead *.plist setfiletype xml
+augroup END
+
 highlight Pmenu ctermbg=75 guibg=#2c323c
 highlight PmenuSel ctermbg=17 guibg=#3c4452
