@@ -15,7 +15,8 @@ zplug "zsh-users/zsh-autosuggestions", defer:3
 
 # Theme
 # zplug "denysdovhan/spaceship-zsh-theme", as:theme, defer:3
-zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme, defer:3
+# zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme, defer:3
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 
 # Check for uninstalled plugins.

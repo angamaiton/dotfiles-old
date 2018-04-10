@@ -187,7 +187,7 @@ install_asdf_plugin "nodejs"
 install_asdf_language() {
   local language="$1"
   local version
-  version="$(asdf list-all "$language" | tail -1)"
+  version="$(asdf list-all "$language" | grep '^[0-9]' | grep -v '[a-z]' | tail -1)"
 
   if ! asdf list "$language" | grep -Fq "$version"; then
     asdf install "$language" "$version"
@@ -208,8 +208,6 @@ bash "$HOME/dotfiles/ruby/install-gems"
 # ASDF: Python
 ## NOTE: Install manually; grepping doesn't work.
 fancy_echo "Installing latest Python (py3)..."
-asdf install python 3.6.3
-asdf global python 3.6.3
 bash "$HOME/dotfiles/python/install-packages"
 
 # ASDF: Elixir
